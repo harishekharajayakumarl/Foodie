@@ -1,0 +1,20 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is a react course from akshay to hari",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harishekhar06/React-Basics.git"
+  },
+  "keywords": [],
+  "author": "Hari Shekhar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harishekhar06/React-Basics/issues"
+  },
+  "homepage": "https://github.com/harishekhar06/React-Basics#readme"
+}
