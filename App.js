@@ -1,7 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const heading = (
+    <h1 className="head" tabIndex="5">
+        Namaskaaram
+    </h1>
+);
 
-const jsxHeading = <h1 className="head">Namaskaaram</h1>;
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(heading);
