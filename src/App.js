@@ -1,33 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-
-
-
-const RestaurantCard = (props) => {
-    const { restData } = props;
-    const { 
-        cloudinaryImageId,
-        name, 
-        cuisines, 
-        avgRating, 
-        costForTwo,
-    } = restData?.info;
-    return(
-        <div className="rest-card" style={{ backgroundColor: "#f0f0f0"}}>
-            <img className="rest-logo" 
-            src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+
-                cloudinaryImageId}
-            alt="food" 
-            />
-            <h3>{name}</h3>
-            <h4>{cuisines.join(", ")}</h4>
-            <h4>{avgRating} ⭐</h4>
-            <h4>{costForTwo}</h4>
-            <h4>{restData.info.sla.deliveryTime} minutes</h4>
-        </div>
-    );
-}
+import Header from "./components/Header";
+import Body from "./components/Body";
+import RestaurantCard from "./components/RestaurantCard";
 
 const resList = [
     {
@@ -1273,23 +1248,9 @@ const resList = [
       },
       "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
     }
-  ]
+];
 
-const Body = () => {
-    return(
-        <div className="body">
-            <div className="search">Search</div>
-            <div className="rest-container">
-                {
-                    resList.map(restaurant => ( //written index for reference to the below point
-                    <RestaurantCard key={restaurant.info.id} restData={restaurant}/>)) //good convention: whenever doing a .map always put a key in the functional component below //good practise wrt React render cycle //important for optimization and efficiency
-                    //never use key={index}, not recommended - bad practice as per React documentation ~ for more info https://react.dev/learn/rendering-lists, https://robinpokorny.com/blog/index-as-a-key-is-an-anti-pattern/, https://robinpokorny.medium.com/index-as-a-key-is-an-anti-pattern-e0349aece318
-//unique id as key (BEST option) index as key (can be used but not recommended) not using key (NOT acceptable)  
-                }
-            </div>
-        </div>
-    );
-}
+
 const AppLayout = () => {
     return(
         <div className="app">
