@@ -21,8 +21,9 @@
 
 
 # Common Practices
-- Creating an src folder and inside it adding the components folder
-- Separate folders for sepatrate componenets
-- Name the componenet folders with same name of component
-- Export the componenet from src/componnets first and then import it in the App.js file
+- Creating an src folder and inside it adding the components folder.
+- Separate folders for sepatrate componenets.
+- Name the componenet folders with same name of component.
+- Export the componenet from src/componnets first and then import it in the App.js file.
 - Never keep URLs and other hard coded data (like APIs) in the components folder.
+- Instaed of writing URLs and hard coded data in componenets, create a folder named utils(standard one).
