@@ -17,4 +17,10 @@
 - Error handling
 - HTTPs
 - Tree shaking - remove the unused code
-- Different dev and produ bundles
+- Different dev and prod bundles
+
+
+# Common Practices
+- Creating an src folder and inside it adding the components folder
+- Separate folders for sepatrate componenets
+- Name the componenet folders with same name of component
