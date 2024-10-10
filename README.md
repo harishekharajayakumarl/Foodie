@@ -29,3 +29,7 @@
 - Instaed of writing URLs and hard coded data in componenets, create a folder named utils(standard one) and inside it we can add files like      constants for CDN links and mockData for some mock APIs or data.
 - Default export can only be used once in a file. Therefore, to export multiple data, we can use named export. eg: export const CDN_URL=""; .
 - To import a named export, we use curly braces'{}'. eg: import { CDN_URL } from "../utils/constants"; .
+
+
+# Why react is faster?
+- It can do faster and effiecient DOM manipulation
