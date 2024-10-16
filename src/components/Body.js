@@ -1,27 +1,55 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
 
-const listOfRestaurants = [{
-    info: {
-        id: "595197",
-        name: "Pizza Hut",
-        cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
-        cuisines: ["Pizzas"],
-        costForTwo: "₹350 for two",
-        deliveryTime: 59,
-        avgRating: "4",
-    },
-    info: {
-        id: "595196",   
-        name: "Dominos",
-        cloudinaryImageId: "2b4f62d606d1b2bfba9ba9e5386fabb7",
-        cuisines: ["Pizzas","Samosa","Burger"],
-        costForTwo: "₹350 for two",
-        deliveryTime: 50,
-        avgRating: "3.8",
+let listOfRestaurants = [{
+    "info": {
+      "id": "595197",
+      "name": "Pizza Hut",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas","Samosa","Burger"
+      ],
+      "avgRating": 4.2,
+      "avgRatingString": "4.2",
+      "sla": {
+        "deliveryTime": 59,
+      }
     }
-    
-}];
+    },
+    {
+    "info": {
+      "id": "595196",
+      "name": "Dominos",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas","Samosa","Burger"
+      ],
+      "avgRating": 4.5,
+      "avgRatingString": "3.8",
+      "sla": {
+        "deliveryTime": 59,
+      }
+    }
+    },
+    {
+    "info": {
+      "id": "595198",
+      "name": "Subway",
+      "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+      "costForTwo": "₹350 for two",
+      "cuisines": [
+        "Pizzas","Samosa","Burger"
+      ],
+      "avgRating": 4.1,
+      "avgRatingString": "4.1",
+      "sla": {
+        "deliveryTime": 59,
+      }
+    }
+    }
+  ];
 const Body = () => {
     return(
         <div className="body">
@@ -29,7 +57,7 @@ const Body = () => {
                 <button className="filter-btn" 
                 onClick={()=>{
                     listOfRestaurants = listOfRestaurants.filter(
-                        (res)=> res.info.avgRatingString > 4
+                        (res=> res.info.sla.avgRatingString > 4)
                     );
                 }}
                 >
