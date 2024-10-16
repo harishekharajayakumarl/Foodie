@@ -39,3 +39,8 @@
 - Most important hooks:
     1. useState() => gives superpowerful state variables
     2. useEffect()
+
+# Virtual Doms, Diff Algorithm, RECONCILIATION ALGORITHM
+- Reconciliar=tion algorithm is also known as React fiber., It is a new way to find and update, similar to "git diff" command.
+- Virtual DOM is a representation of actual DOM, and the end products are React elements (similar to React.createElement).
+- Diff Algorithm calculates the differences in virtaul DOMs and updates it in every render cycle.
