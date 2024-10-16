@@ -33,3 +33,9 @@
 
 # Why react is faster?
 - It can do faster and effiecient DOM manipulation
+
+# React Hooks
+- Normal JS utility functions
+- Most important hooks:
+    1. useState() => gives superpowerful state variables
+    2. useEffect()
