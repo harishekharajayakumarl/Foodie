@@ -1,6 +1,6 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
-import { useState } from "react"; 
+import { useState, useEffect } from "react"; 
 
 const Body = () => {
 
@@ -11,7 +11,11 @@ const Body = () => {
 
     const [listOfRestaurants, setListOfRestaurants] = useState(resList);
 // The second parameter here (setListOfrestaurant) is the function for any modification or any other fuctionalities
+    useEffect(() => {
+        console.log("useEffect Called");
+    }, [])
 
+    console.log('Body rendered');
     return(
         <div className="body">
             <div className="filter">
