@@ -20,9 +20,13 @@ const Body = () => {
         );
         const json = await data.json();
         console.log(json);
-        setListOfRestaurants(json.data.cards[1].card.card.gridElements.infoWithStyle.restaurants);
+        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    };
+
+    if(listOfRestaurants.length === 0){
+        return <h1>Loading...</h1>
     }
-    console.log('Body rendered');
+    
     return(
         <div className="body">
             <div className="filter">
