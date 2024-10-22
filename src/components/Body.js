@@ -1,5 +1,4 @@
 import RestaurantCard from "./RestaurantCard";
-import resList from "../../utils/mockData";
 import { useState, useEffect } from "react"; 
 
 const Body = () => {
@@ -9,7 +8,7 @@ const Body = () => {
 // this javascript function has some logic written BTS inside React, this javascript function is a utility function readily available to us by React
 //in simple words React hook is a utility function provided to us by React that make work of our component more easier or that streamlines the work of your React components
 
-    const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+    const [listOfRestaurants, setListOfRestaurants] = useState([]);
 // The second parameter here (setListOfrestaurant) is the function for any modification or any other fuctionalities
     useEffect(() => {
         fetchData();
