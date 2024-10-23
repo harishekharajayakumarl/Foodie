@@ -9,8 +9,13 @@ const Body = () => {
 // this javascript function has some logic written BTS inside React, this javascript function is a utility function readily available to us by React
 //in simple words React hook is a utility function provided to us by React that make work of our component more easier or that streamlines the work of your React components
 
-    const [listOfRestaurants, setListOfRestaurants] = useState([]);
 // The second parameter here (setListOfrestaurant) is the function for any modification or any other fuctionalities
+    const [listOfRestaurants, setListOfRestaurants] = useState([]);
+    const [searchText, setSearchText] = useState("");
+
+    console.log("Body Rendered");
+// Whenever state variables updates, react trigeers a reconciliation cycle
+
     useEffect(() => {
         fetchData();
     }, [])
@@ -33,8 +38,12 @@ const Body = () => {
         <div className="body">
             <div className="filter">
                 <div className="search">
-                    <input type="text" className="search-box" />
-                    <button>Search</button>
+                    <input type="text" className="search-box" value={searchText} onChange={(e) => {
+                        setSearchText(e.target.value);
+                    }}/>
+                    <button onClick={() => {
+    
+                    }}>Search</button>
 
                 </div>
                 <button className="filter-btn" 
