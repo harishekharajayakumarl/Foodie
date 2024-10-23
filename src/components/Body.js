@@ -12,6 +12,7 @@ const Body = () => {
 // The second parameter here (setListOfrestaurant) is the function for any modification or any other fuctionalities
     const [listOfRestaurants, setListOfRestaurants] = useState([]);
     const [searchText, setSearchText] = useState("");
+    const [filteredRestaurant, setFilteredrestaurant] = useState([]);
 
     console.log("Body Rendered");
 // Whenever state variables updates, react trigeers a reconciliation cycle
@@ -27,6 +28,7 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
         setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setFilteredrestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     };
 
     // Conditional Rendering
@@ -42,6 +44,9 @@ const Body = () => {
                         setSearchText(e.target.value);
                     }}/>
                     <button onClick={() => {
+                        const filteredRestaurant = listOfRestaurants.filter((res) => 
+                            res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                        setFilteredrestaurant(filteredRestaurant);
     
                     }}>Search</button>
 
@@ -59,7 +64,7 @@ const Body = () => {
                 </button>
             </div>
             <div className="rest-container">
-                {listOfRestaurants.map(restaurant => ( 
+                {filteredRestaurant.map(restaurant => ( 
                     <RestaurantCard key={restaurant.info.id} restData={restaurant}/>)) 
                 }
             </div>
