@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 const Header = () => {
     const [btnNameReact, setBtnNamereact] = useState("Login");
     // If no dependency array, useEffect is called on every render
-    // If there is an empty dependenc array, it will be rendered only on the initial render and only once
+    // If there is an empty dependency array, useEffect will be rendered only on the initial render and only once
     useEffect(() => {
         console.log("useEffect called");
     },[btnNameReact]); 
-    // whenever the btnNamereact is on the dependency array, it is rendered always when btnNamreact is updated
+    // whenever the btnNamereact is on the dependency array, it is rendered always when btnNamereact is updated
 
     return(
         <div className="header">
@@ -25,8 +25,11 @@ const Header = () => {
                     <li>Cart</li>
                     <button className="login" 
                     onClick={() => {
-                        setBtnNamereact("Logout");
-                    }}>{ btnNameReact }</button>
+                        btnNameReact === "Login"
+                        ? setBtnNamereact("Logout")
+                        : setBtnNamereact("Login");
+                    }}
+                    >{ btnNameReact }</button>
                 </ul>
             </div>
         </div>
