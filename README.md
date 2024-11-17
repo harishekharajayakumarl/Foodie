@@ -44,3 +44,7 @@
 - Reconciliar=tion algorithm is also known as React fiber., It is a new way to find and update, similar to "git diff" command.
 - Virtual DOM is a representation of actual DOM, and the end products are React elements (similar to React.createElement).
 - Diff Algorithm calculates the differences in virtaul DOMs and updates it in every render cycle.
+
+# 2 types of Routing in web apps
+- Clinet side routing
+- Server side routing
