@@ -4,23 +4,31 @@ import React from "react";
 class UserClass extends React.Component{
     constructor(props){
         super(props);
-        // console.log(props);
-        this.state = {};
+        this.state = {
+            userInfo: {
+                name: "Dummy",
+                location: "Default",
+                avatar_url: "https://dummy-pic.com",
+            },
+        };
 
         // console.log(this.props.name + "Child Constructor");
     }
     async componentDidMount(){
         // console.log(this.props.name + "Child DidMount");
-        const data = await fetch("");
+        const data = await fetch("https://api.github.com/users/harishekharajayakumarl");
+        const json = await data.json();
+        this.setState({
+            userInfo: json,
+        })
     }
     render(){
-        const { name, location } = this.props;
-
-        console.log(this.props.name + "Child Render");
+        const { name, location, avatar_url } = this.state.userInfo;
+        // debugger;
+        // console.log(this.props.name + "Child Render");
         return(
-            <div className="user-card">
-            {/* <h2>Name: {this.props.name}</h2>
-            <h3>Location: {this.props.location}</h3> */}
+        <div className="user-card">
+            <img src={avatar_url} />
             <h2>Name: {name}</h2>
             <h3>Location: {location}</h3>
         </div>
