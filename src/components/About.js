@@ -14,19 +14,18 @@ import UserClass from "./userClass";
 class About extends Component {
     constructor(props){
         super(props);
-        console.log(this.props.name + "Parent Constructor");
+        // console.log(this.props.name + "Parent Constructor");
     }
     componentDidMount(){
-        console.log(this.props.name + "Parent DidMount");
+        // console.log(this.props.name + "Parent DidMount");
     }
     render(){
-        console.log(this.props.name + "Parent Render");
+        // console.log(this.props.name + "Parent Render");
         return(
                     <div>
                         <h1>About</h1>
                         {/* <User name="Harishekhar" location="Alappuzha"/> */}
-                        <UserClass name="Hari Shekhar" location="Thiruvananthapuram"/>
-                        <UserClass name="Manav" location="Thrissur"/>
+                        <UserClass name={"First"} location="Thiruvananthapuram"/>
                     </div>
                 );
     }
