@@ -22,6 +22,12 @@ class UserClass extends React.Component{
             userInfo: json,
         })
     }
+    componentDidMount(){
+        console.log("Component Did Mount");
+    }
+    componentWillUnmount(){
+        console.log("Component Will unmount");
+    }
     render(){
         const { name, location, avatar_url } = this.state.userInfo;
         // debugger;
