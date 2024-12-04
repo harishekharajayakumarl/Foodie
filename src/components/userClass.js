@@ -14,7 +14,8 @@ class UserClass extends React.Component{
 
         // console.log(this.props.name + "Child Constructor");
     }
-    async componentDidMount(){
+    // for api call
+    async componentDidMount(){ 
         // console.log(this.props.name + "Child DidMount");
         const data = await fetch("https://api.github.com/users/harishekharajayakumarl");
         const json = await data.json();
@@ -22,9 +23,7 @@ class UserClass extends React.Component{
             userInfo: json,
         })
     }
-    componentDidMount(){
-        console.log("Component Did Mount");
-    }
+
     componentWillUnmount(){
         console.log("Component Will unmount");
     }

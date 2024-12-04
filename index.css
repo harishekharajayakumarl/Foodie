@@ -28,6 +28,10 @@
     text-align: center;
 
 }
+.rest-card img{
+    width: 12vw;
+    height: 12vw;
+}
 .rest-card:hover{
     cursor: pointer;
     border: 1px solid black;
