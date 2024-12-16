@@ -1,0 +1,77 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+}
+
+.logo{
+    width: 150px;
+}
+.nav-items > ul{
+    display: flex;
+    font-size: 24px;
+    padding: 0px 20px;
+    list-style-type: none;
+}
+.nav-items > ul > li{
+    padding: 10px;
+    margin: 10px;
+}
+.rest-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.rest-card{
+    margin: 5px;
+    padding: 20px;
+    width: 200px;
+    text-align: center;
+
+}
+.rest-card img{
+    width: 12vw;
+    height: 12vw;
+}
+.rest-card:hover{
+    cursor: pointer;
+    border: 1px solid black;
+}
+.search{
+    padding: 10px;
+}
+.rest-logo{
+    width: 100%;
+}
+.filter-btn{
+    margin: 10px;
+    cursor: pointer;
+}
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .shimmer-card{
+    height: 600px;
+    width: 200px;
+    background-color: #f0f0f0;
+    margin-right: 40px;
+    margin-left: 10px;
+  }
+.login{
+    padding: 0 20px;
+    cursor: pointer;
+}
+.filter{
+    display: flex;
+}
+
+.user-card{
+    padding: 10px;
+    border: 1px solid black;
+}
+.user-card img{
+   width: 10%;
+   border-radius: 40%;
+}
