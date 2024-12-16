@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/harishekhar06/React-Basics.git"
+    "url": "git+https://github.com/harishekharajayakumarl/Foodie.git"
   },
   "keywords": [],
   "author": "Hari Shekhar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/harishekhar06/React-Basics/issues"
+    "url": "https://github.com/harishekharajayakumarl/Foodie/issues"
   },
-  "homepage": "https://github.com/harishekhar06/React-Basics#readme",
+  "homepage": "https://github.com/harishekharajayakumarl/Foodie#readme",
   "devDependencies": {
     "parcel": "^2.12.0",
     "process": "^0.11.10"
