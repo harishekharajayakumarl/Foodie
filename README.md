@@ -48,3 +48,6 @@
 # 2 types of Routing in web apps
 - Clinet side routing
 - Server side routing
+
+# App Chunking/Lazy Loading/Code splitting/dynamic bundling/on-demand loading/dynamic importing
+- Making application into smaller logical chunks(parts).
