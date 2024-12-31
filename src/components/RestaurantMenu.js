@@ -13,7 +13,7 @@ const RestaurantMenu = () => {
     const { itemCards } = resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card || {};
     
     return (
-        <div className="m-4 p-4 rounded-lg shadow-lg" style={{ backgroundColor: "#f0f0f0"}}>
+        <div className="m-4 p-4 rounded-lg shadow-lg bg-green-50" >
             <h1 className="font-bold text-xl text-center">{name}</h1>
             <h2  className="font-bold text-lg flex wrap" style={{ display: 'inline-block'}}>{avgRatingString} ({totalRatingsString})</h2>
             <h2 className='font-bold text-lg'>{costForTwoMessage}</h2>
