@@ -37,7 +37,7 @@ const Body = () => {
     if(onlineStatus === false) 
         return (
         <h1>
-            Looks like you are offline!!! Please check your internet connection
+            Looks like you are offline 😥!!! Please check your internet connection
         </h1>
         );
 
@@ -48,30 +48,32 @@ const Body = () => {
     
     return listOfRestaurants.length === 0 ? <Shimmer /> : (
         <div className="body">
-            <div className="filter">
-                <div className="search">
-                    <input type="text" className="search-box" value={searchText} onChange={(e) => {
+            <div className="filter flex">
+                <div className="search p-4 m-4">
+                    <input type="text" className="border border-solid border-black" value={searchText} onChange={(e) => {
                         setSearchText(e.target.value);
                     }}/>
-                    <button onClick={() => {
+                      <button className="px-4 py-2 bg-orange-400 m-4 rounded-full shadow-xl"
+                    onClick={() => {
                         const filteredRestaurant = listOfRestaurants.filter((res) => 
                             res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                         setFilteredrestaurant(filteredRestaurant);
     
                     }}>Search</button>
-
                 </div>
-                <button className="filter-btn" 
-                onClick={()=>{
-                    const filteredList = listOfRestaurants.filter(
-                        (res)=> res.info.avgRating >= 4
-                    );
-                    setListOfRestaurants(filteredList);
-                    // console.log(listOfRestaurants);
-                }}
-                >
-                    Top Rated Restaurants
-                </button>
+                <div className="p-4 m-4 flex items-center">
+                    <button className="px-4 py-2 bg-green-500 m-4 shadow-xl rounded-full" 
+                    onClick={()=>{
+                        const filteredList = listOfRestaurants.filter(
+                            (res)=> res.info.avgRating > 4
+                        );
+                        setListOfRestaurants(filteredList);
+                        // console.log(listOfRestaurants);
+                    }}
+                    >
+                        Top Rated Restaurants
+                    </button>
+                </div>
             </div>
             <div className="rest-container">
                 {filteredRestaurant.map(restaurant => ( 
