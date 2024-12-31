@@ -14,7 +14,7 @@ const Header = () => {
     // whenever the btnNamereact is on the dependency array, it is rendered always when btnNamereact is updated
 
     return(
-        <div className="flex justify-between bg-pink-100 shadow-lg">
+        <div className="flex justify-between bg-blue-50 shadow-lg">
             <div className="logo-container">
             <img className="w-56" src={LOGO_URL}/>
             </div>
@@ -26,7 +26,7 @@ const Header = () => {
                     <li className="px-4 font-bold text-lg"><Link to="/contact">Contact Us</Link></li>
                     <li className="px-4 font-bold text-lg"><Link to="/grocery">Grocery</Link></li>
                     <li className="px-4 font-bold text-lg"><Link to="/cart">Cart</Link></li>
-                    <button className="font-bold" 
+                    <button className="font-bold text-lg" 
                     onClick={() => {
                         btnNameReact === "Login"
                         ? setBtnNamereact("Logout")
