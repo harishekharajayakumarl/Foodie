@@ -23,7 +23,7 @@ class About extends Component {
         // console.log(this.props.name + "Parent Render");
         return(
                     <div>
-                        <h1>About</h1>
+                        <h1 className="m-4 p-4 font-bold text-xl">About</h1>
                         {/* <User name="Harishekhar" location="Alappuzha"/> */}
                         <UserClass name={"First"} location="Thiruvananthapuram"/>
                     </div>
