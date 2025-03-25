@@ -21,7 +21,7 @@ const RestaurantMenu = () => {
             {/* <h2  className="font-bold text-lg flex wrap" style={{ display: 'inline-block'}}>{avgRatingString} ({totalRatingsString})</h2> */}
             <p className='font-bold text-lg'>{cuisines.join(", ")} - {costForTwoMessage}</p> 
             {categories?.map((category, index) => (
-                <RestaurantCategory data={category?.card?.card}/>
+                <RestaurantCategory key={category?.card?.card?.title} data={category?.card?.card}/>
       ))}
         </div>
     );
