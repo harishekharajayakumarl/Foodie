@@ -51,3 +51,9 @@
 
 # App Chunking/Lazy Loading/Code splitting/dynamic bundling/on-demand loading/dynamic importing
 - Making application into smaller logical chunks(parts).
+
+# Redux
+- Redux working:
+  1. First the action is dispatched from the button(state), which calls the reducer function..
+  2. The reducer function updates the slice of the redux store.
+  3. Then using the selector function it subscribes the state.
