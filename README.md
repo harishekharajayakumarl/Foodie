@@ -57,3 +57,9 @@
   1. First the action is dispatched from the button(state), which calls the reducer function..
   2. The reducer function updates the slice of the redux store.
   3. Then using the selector function it subscribes the state.
+
+# Types of testing
+- Developer side teting is of 3 types:
+  1. Unit Testing
+  2. Integration Testing
+  3. End to End (e2e) Testing
